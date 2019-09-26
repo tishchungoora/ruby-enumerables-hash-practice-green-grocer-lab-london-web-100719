@@ -79,7 +79,7 @@ def checkout(cart, coupons)
   # Initialize the amount due as zero
   amount_due = 0
   
-  # Go through each item in the final cart hash to cummulatively calculate the amount due. The total per item is the product of its price and quantity
+  # Go through each item in the final cart hash to cumulatively calculate the amount due. The total per item is the product of its price and quantity
   final_cart.each do |item, attributes|
     amount_due += attributes[:price] * attributes[:count]
     
