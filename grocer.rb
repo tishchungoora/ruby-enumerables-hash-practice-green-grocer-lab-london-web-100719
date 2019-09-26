@@ -58,10 +58,8 @@ end
 
 def apply_clearance(cart)
   
-  #Go through each key in the cart hash
+  #Go through each key in the cart hash. If clearance applies to the item then update its price so that a 20% discount is applied, rounded to two decimal places
   cart.each_key do |item|
-    
-    # If clearance applies to the item then update its price so that a 20% discount is applied, rounded to two decimal places
     if cart[item][:clearance] == true
       cart[item][:price] = (cart[item][:price] * 0.8).round(2)
     end
